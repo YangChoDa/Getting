@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import Person from './personComponents/Person';
+//import Person from './personComponents/Person';
+import MyPage from './myPageComponent/MyPage';
 
 class App extends Component {
     render() {
       return (
         <div className="ui container">
-            <Person></Person>
+            <MyPage></MyPage>
         </div>
       );
     }

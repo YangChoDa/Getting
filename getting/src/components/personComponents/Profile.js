@@ -8,7 +8,7 @@ class Profile extends Component {
   render(){
       return(
           <div className='person_profile'>
-
+            
           </div>
       )
   }
