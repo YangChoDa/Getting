@@ -60,7 +60,7 @@ class Menu extends Component {
     if (this.state.menuBtn === "diaries") {
       menuState = <div className="diaries">{this.photos}</div>;
     } else if (this.state.menuBtn === "families") {
-      menuState = <div className="families" />;
+      menuState = <div className="families"></div>;
     } else {
       menuState = <div className="visitors" />;
     }
