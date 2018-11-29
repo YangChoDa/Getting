@@ -9,5 +9,3 @@ export default class diaryList extends Component {
     )
   }
 }
-
-export default diaryList;
