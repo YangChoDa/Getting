@@ -6,6 +6,7 @@ class Profile extends Component {
     super(props);
   }
 
+
   render() {
     return (
       <div className="profile">
