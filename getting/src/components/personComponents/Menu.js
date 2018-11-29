@@ -4,36 +4,65 @@ import {
   ToggleButtonGroup,
   ToggleButton
 } from "react-bootstrap";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 import "./Menu.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Menu extends Component {
   photos = [];
-  
+
   constructor(props) {
     super(props);
     this.photos = props.photos.map(photo => {
-      return <img key={photo.url} src={photo.url} />;
+      return (
+        <div className="cards">
+          <Card>
+            <CardImg
+              top
+              width="100%"
+              height="300px"
+              src={photo.url}
+              alt="Card image cap"
+            />
+            <CardBody>
+              <CardTitle>Card Title</CardTitle>
+              <CardText>
+                This is a wider card with supporting text below as a natural 
+              </CardText>
+              <CardText>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </CardText>
+            </CardBody>
+          </Card>
+        </div>
+      );
     });
     this.state = {
-        menuBtn: "photos"
-      };
+      menuBtn: "diaries"
+    };
   }
 
-  setValue = (e) => {
+  setValue = e => {
     this.setState({ menuBtn: e });
-    // this.state = {menuBtn:e};    
-  }
+    // this.state = {menuBtn:e};
+  };
 
   render() {
     let menuState;
-    if(this.state.menuBtn === 'photos'){
-        menuState = <div className="photos">{this.photos}</div>;
-    }else if(this.state.menuBtn === 'diaries'){
-        menuState = <div className="diaries" />;
-    }else if(this.state.menuBtn === 'families'){
-        menuState = <div className="families" />;
-    }else{
-        menuState = <div className="visitors" />;
+    if (this.state.menuBtn === "diaries") {
+      menuState = <div className="diaries">{this.photos}</div>;
+    } else if (this.state.menuBtn === "families") {
+      menuState = <div className="families" />;
+    } else {
+      menuState = <div className="visitors" />;
     }
     return (
       <div className="menu">
@@ -41,10 +70,9 @@ class Menu extends Component {
           <ToggleButtonGroup
             type="radio"
             name="options"
-            defaultValue="photos"
+            defaultValue="diaries"
             onChange={this.setValue}
           >
-            <ToggleButton value="photos">Photos</ToggleButton>
             <ToggleButton value="diaries">Diary</ToggleButton>
             <ToggleButton value="families">Family</ToggleButton>
             <ToggleButton value="visitors">방명록</ToggleButton>
