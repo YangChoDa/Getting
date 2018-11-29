@@ -9,16 +9,16 @@ import "./Person.css";
 class Person extends Component {
   state = {
     photos: [
-      {url:'./person_images/photos/dog1.jpg'},
-      {url:'./person_images/photos/dog2.jpg'},
-      {url:'./person_images/photos/dog3.jpg'},
-      {url:'./person_images/photos/dog4.jpg'},
-      {url:'./person_images/photos/dog5.jpg'},
-      {url:'./person_images/photos/dog6.jpg'},
-      {url:'./person_images/photos/dog7.jpg'},
-      {url:'./person_images/photos/dog8.jpg'},
-      {url:'./person_images/photos/dog9.jpg'},
-      {url:'./person_images/photos/dog10.jpg'}
+      {url:'./person_images/photos/dog1.jpg',description:'귀귀귀요미 일상'},
+      {url:'./person_images/photos/dog2.jpg',description:'뭘 원하니'},
+      {url:'./person_images/photos/dog3.jpg',description:'햇살 쨍쨍'},
+      {url:'./person_images/photos/dog4.jpg',description:'간식준다니 헤헿'},
+      {url:'./person_images/photos/dog5.jpg',description:'잠온다아ㅏ'},
+      {url:'./person_images/photos/dog6.jpg',description:'카페왔다ㅏ'},
+      {url:'./person_images/photos/dog7.jpg',description:'친구왔다ㅏ'},
+      {url:'./person_images/photos/dog8.jpg',description:'심심해ㅐ'},
+      {url:'./person_images/photos/dog9.jpg',description:'뀨옹'},
+      {url:'./person_images/photos/dog10.jpg',description:'졸려ㅕ'}
     ]
   }
 
@@ -37,8 +37,6 @@ class Person extends Component {
         <Tabs>
           <TabList>
             <Tab>인절미</Tab>
-            <Tab>Title 2</Tab>
-            <button>+</button>
           </TabList>
           <TabPanel>
             <div className="patInfo">
