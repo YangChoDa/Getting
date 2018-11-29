@@ -9,5 +9,3 @@ export default class family extends Component {
     )
   }
 }
-
-export default family;

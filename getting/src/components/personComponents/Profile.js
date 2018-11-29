@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './Profile.css';
+import { Link } from 'react-router';
 
 class Profile extends Component {
   constructor(props) {

@@ -1,18 +1,29 @@
-.person_header{
-    width:100%;
-    height:10%;
-}
-
-.logo_img{
-    width:5%;
-}
 
 .profile{
     width:100%;
+    height:50vh;
+    border:solid 1px;
 }
 
 .profile-img{
-    width:25%;
+    width:90%;
+    height:90%;
     border-radius: 50%;
-    margin:3%;
+    margin:5%;
+}
+
+.profileInfo{
+    margin-left:10%;
+    margin-top:3%;
+    float:left;
+}
+
+.profileImg{
+    float:left;
+    height:100%;
+}
+
+.patInfo{
+    height:100%;
+    width:100%;
 }
