@@ -9,7 +9,7 @@ class App extends Component {
       return (
         <div className="ui container">
             {/* <Login></Login> */}
-            {/* <Person></Person> */}
+            <Person></Person>
         </div>
       );
     }
