@@ -33,9 +33,9 @@ class Menu extends Component {
               alt="Card image cap"
             />
             <CardBody>
-              <CardTitle>Card Title</CardTitle>
+              <CardTitle><strong>좋아요</strong> </CardTitle>
               <CardText>
-                This is a wider card with supporting text below as a natural 
+                {photo.description}
               </CardText>
               <CardText>
                 <small className="text-muted">Last updated 3 mins ago</small>
