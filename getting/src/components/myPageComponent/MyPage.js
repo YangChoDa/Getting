@@ -43,7 +43,7 @@ export default class MyPage extends Component {
           Profile
         </Button>
         <Button onClick={()=>this.setValue('diaries')} outline color="primary">
-          Diares
+          Diaries
         </Button>
         <Button onClick={()=>this.setValue('family')} outline color="secondary">
           family

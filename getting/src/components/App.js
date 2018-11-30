@@ -11,7 +11,7 @@ class App extends Component {
       return (
         <div className="ui container">
             {/* <MyPage></MyPage> */}
-            <Login></Login>
+            {/* <Login></Login> */}
            {/* <Person></Person> */}
         </div>
       );

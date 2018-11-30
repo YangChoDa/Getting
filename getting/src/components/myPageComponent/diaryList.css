@@ -1,0 +1,11 @@
+.cards{
+    width:40vh;
+    min-width: 250px;
+    float:left;
+}
+
+.card-container{
+    margin: 100px;
+    padding: 10px 20px;
+}
+
