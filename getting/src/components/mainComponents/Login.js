@@ -65,35 +65,55 @@ class Login extends Component {
         <div class='picture'>
           <input type='file' id='up' class='file1' ref={fileInput => this.fileInput = fileInput} />
           <img src="./images/1.png" className="profile-img" onClick={this.triggerInputFile} />
+          <center>
+          <p>Introduce Your Doggy</p>
+          </center>
+          <div class="paper">
+          <div class="paper-content">
+          <textarea class="note" autoFocus>
+          </textarea> 
+          </div>
+          </div> 
         </div>
 
         <div class='dogP'>
         <form action="#" method="post">
+        <div class='Input'>
 				<input type="text" Name="Name" placeholder="Name" required="" />
-				<div class="radio-btns agileits w3layouts">
-					<div class="cc-selector wthreeselector">
+        <label />
+        </div>
+        <div class='Input'>
+				<input type="text" Name="Thick" placeholder="Thick" required="" />
+        <label />
+        </div>
+				<div>
+					<div>
 						<p>Gender</p>
 					</div>
-					<div class="cc-selector wthreeselector">
-						<input id="visa" type="radio" name="credit-card" value="visa" />
-						<label class="drinkcard-cc visa" for="visa"></label>
+					<div class="gender-selector">
+						<input id="male" type="radio" name="gender" value="male" />
+						<label class="gender male" for="male"></label>
 					</div>
-					<div class="cc-selector wthreeselector">
-						<input id="mastercard" type="radio" name="credit-card" value="mastercard" />
-						<label class="drinkcard-cc mastercard" for="mastercard"></label>
+					<div class="gender-selector">
+						<input id="female" type="radio" name="gender" value="female" />
+						<label class="gender female" for="female"></label>
 					</div>
 				</div>
-				<div class="wthreedob">
-					<input class="date agileits w3layouts" id="datepicker1" type="text" value="Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
-				</div>
-				<input class="fill email" type="text" name="Email" placeholder="Email" required="" />
-				<input type="password" Name="Password" placeholder="Password" required="" />
-				<input class="fill tel" name="Phone" placeholder="Phone" required="" />
-				<input type="text" Name="Customer ID" placeholder="Customer ID" required="" />
-				<div class="send-button wthree agileits">
-					<input type="submit" value="Sign Up" />
-				</div>
-			</form>
+        <p>Date of Birth:</p>
+				<div class="Input">
+					<input class="date" type="date" id="start" name="trip-start" />
+          <label />
+        </div>
+        <div class="Input">
+				<input type="text" name="Email" placeholder="Email" required="" />
+        <label />
+        </div>
+        <div class="Input">
+        <input Name="Password" placeholder="Password" required="" />
+        <label />
+        </div>
+        <button class="signupB"> Sign Up</button>
+      </form>
         </div>  
       </div>);
     }
