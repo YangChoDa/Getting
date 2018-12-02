@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./myPage.css";
-import Profile from './Person';
+import Profile from "./Person";
 import Diaries from "./diaryList";
 import EditProfile from "./editProfile";
 import Family from "./family";

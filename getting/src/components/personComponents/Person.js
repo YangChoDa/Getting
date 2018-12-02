@@ -49,9 +49,6 @@ class Person extends Component {
               <Menu photos={this.state.photos}/>
             </div>
           </TabPanel>
-          <TabPanel>
-            <h2>Any content 2</h2>
-          </TabPanel>
         </Tabs>
       </div>
     );

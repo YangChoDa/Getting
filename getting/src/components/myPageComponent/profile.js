@@ -1,26 +1,33 @@
 import React, { Component } from "react";
 import "./profile.css";
+import SelfModal from "./selfModal";
 
 class Profile extends Component {
   likes = [];
 
   constructor(props) {
     super(props);
+    // this.state = {
+    //   buttonLabel: "Edit Profile",
+    //   className: "btn btn-danger"
+    // }
+
     this.likes = props.likes.map(like => {
       return (
         <div className="likeInfo">
-          <img src={like.url} className="likeImg"></img>
+          <img src={like.url} className="likeImg" alt=""></img>
           <strong>{like.name}</strong>({like.gender})
         </div>
       );
     });
   }
-
   render() {
+
     return (
       <div className="profile">
+      <SelfModal />
         <div className="profileImg">
-          <img src="./images/pat1.png" className="profile-img" />
+          <img src="./images/pat1.png" className="profile-img" alt=""/>
         </div>
         <div className="profileInfo">
           <div className="profileInfoes">
@@ -31,7 +38,7 @@ class Profile extends Component {
           <hr className="hrs" />
           <div className="likes">
             <div className="boneImg">
-              <img src="./person_images/bone.png" className="bone" />
+              <img src="./person_images/bone.png" className="bone" alt=""/>
             </div>
             <div className="likeInfoes">
               {this.likes}
