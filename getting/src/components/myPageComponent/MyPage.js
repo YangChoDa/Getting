@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./myPage.css";
-import Profile from './Person';
+import Profile from "./Person";
 import Diaries from "./diaryList";
 import EditProfile from "./editProfile";
 import Family from "./family";
 import GuestBook from "./guestBook";
+import PageTemplate from "../common/PageTemplate/PageTemplate";
 
 export default class MyPage extends Component {
   constructor(props) {
@@ -24,38 +25,55 @@ export default class MyPage extends Component {
   };
 
   showView = () => {
-    if(this.state.menuBtn === "profile")
-      return <Profile />
-    if(this.state.menuBtn === "diaries")
-      return <Diaries />
-    if(this.state.menuBtn === "family")
-      return <Family />
-    if(this.state.menuBtn === "guestBook")
-      return <GuestBook />
-    if(this.state.menuBtn === "edit Profile")
-      return <EditProfile />
+    if (this.state.menuBtn === "profile") return <Profile />;
+    if (this.state.menuBtn === "diaries") return <Diaries />;
+    if (this.state.menuBtn === "family") return <Family />;
+    if (this.state.menuBtn === "guestBook") return <GuestBook />;
+    if (this.state.menuBtn === "edit Profile") return <EditProfile />;
   };
 
   render() {
     return (
-      <div>
-        <Button onClick={()=>this.setValue('profile')} outline color="warning">
-          Profile
-        </Button>
-        <Button onClick={()=>this.setValue('diaries')} outline color="primary">
-          Diaries
-        </Button>
-        <Button onClick={()=>this.setValue('family')} outline color="secondary">
-          family
-        </Button>
-        <Button onClick={()=>this.setValue('guestBook')} outline color="success">
-          guestBook
-        </Button>
-        <Button onClick={()=>this.setValue('edit Profile')} outline color="info">
-          edit Profile
-        </Button>
-        {this.showView()}
-      </div>
+      <PageTemplate>
+        <div>
+          <Button
+            onClick={() => this.setValue("profile")}
+            outline
+            color="warning"
+          >
+            Profile
+          </Button>
+          <Button
+            onClick={() => this.setValue("diaries")}
+            outline
+            color="primary"
+          >
+            Diaries
+          </Button>
+          <Button
+            onClick={() => this.setValue("family")}
+            outline
+            color="secondary"
+          >
+            family
+          </Button>
+          <Button
+            onClick={() => this.setValue("guestBook")}
+            outline
+            color="success"
+          >
+            guestBook
+          </Button>
+          <Button
+            onClick={() => this.setValue("edit Profile")}
+            outline
+            color="info"
+          >
+            edit Profile
+          </Button>
+          {this.showView()}
+        </div>
+      </PageTemplate>
     );
   }
 }

@@ -90,7 +90,7 @@ class Menu extends Component {
 
     }
     return (
-      <div className="menu">
+      <div className="menus">
         <ButtonToolbar>
           <ToggleButtonGroup
             type="radio"

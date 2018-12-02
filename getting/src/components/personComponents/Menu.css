@@ -1,7 +1,14 @@
+
 .cards{
-    width:40vh;
+    width:20%;
     min-width: 250px;
+    max-width: 300px;
     float:left;
+}
+
+.diaries{
+    width:100%;
+    height:50%;
 }
 
 small{

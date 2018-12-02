@@ -1,21 +1,22 @@
-import React, { Component } from "react";
-import MyPage from './myPageComponent/MyPage';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { MyPage, Person, Login } from "./index";
+import PageTemplate  from './common/PageTemplate/index';
 
-import Person from './personComponents/Person';
-import Login from './mainComponents/Login';
+import "./App.css";
 
-import './App.css';
+const App = () => {
+  return (
+    <div className="main">
+      <Switch>
+        <Route exact path="/" component={PageTemplate}/>
+        <Route exact path="/login" component={Login}/>
+        <Route exact path="/person" component={Person}/>
+        <Route exact path="/mypage" component={MyPage}/>
+      </Switch>
+    </div>
+  );
+};
 
-class App extends Component {
-    render() {
-      return (
-        <div className="ui container">
-            {/* <MyPage></MyPage> */}
-            {/* <Login></Login> */}
-           <Person></Person>
-        </div>
-      );
-    }
-  }
-  
-  export default App;
+
+export default App;

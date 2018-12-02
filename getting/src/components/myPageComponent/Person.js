@@ -33,11 +33,6 @@ class Person extends Component {
   render() {
     return (
       <div className="personPage">
-        <div className="person_header">
-          <a href="#">
-            <img src="Logo.png" className="logo_img" />
-          </a>
-        </div>
         <Tabs>
           <TabList>
             <Tab>인절미</Tab>

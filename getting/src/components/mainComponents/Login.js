@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import "./Login.css";
 
 class Login extends Component {
@@ -45,7 +46,7 @@ class Login extends Component {
                 <label />
               </div>
             </center>
-            <button> Sign In</button>
+            <Link to="/"><button> Sign In</button></Link>
             <div class="social-signin">
               <button class="fb">
                 <img src="./images/facebook.png" className="facebook-img" />
