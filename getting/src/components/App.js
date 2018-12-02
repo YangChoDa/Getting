@@ -8,7 +8,7 @@ class App extends Component {
     render() {
       return (
         <div className="ui container">
-            <MyPage></MyPage>
+            {/* <MyPage></MyPage> */}
             {/* <Login></Login> */}
            {/* <Person></Person> */}
         </div>
