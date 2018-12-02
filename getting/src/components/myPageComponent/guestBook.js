@@ -9,5 +9,3 @@ export default class guestBook extends Component {
     )
   }
 }
-
-export default guestBook;

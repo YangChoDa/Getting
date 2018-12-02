@@ -9,5 +9,3 @@ export default class editProfile extends Component {
     )
   }
 }
-
-export default editProfile;
