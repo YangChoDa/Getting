@@ -26,10 +26,6 @@ class Person extends Component {
     ]
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="personPage">
@@ -41,9 +37,6 @@ class Person extends Component {
             <div className="patInfo">
               <Profile likes={this.state.likes}/>
             </div>
-          </TabPanel>
-          <TabPanel>
-            <h2>Any content 2</h2>
           </TabPanel>
         </Tabs>
       </div>
