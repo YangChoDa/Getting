@@ -9,8 +9,12 @@ class Profile extends Component {
     this.likes = props.likes.map(like => {
       return (
         <div className="likeInfo">
-          <img src={like.url} className="likeImg"></img>
-          <strong>{like.name}</strong>({like.gender})
+          <div className="likeImgDiv">
+            <img src={like.url} className="likeImg"></img>
+          </div>
+          <div className="likeInfoName">
+            <strong>{like.name}</strong>
+          </div>
         </div>
       );
     });
