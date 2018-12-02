@@ -12,7 +12,7 @@ class App extends Component {
         <div className="ui container">
             {/* <MyPage></MyPage> */}
             {/* <Login></Login> */}
-           {/* <Person></Person> */}
+           <Person></Person>
         </div>
       );
     }

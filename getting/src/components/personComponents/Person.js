@@ -19,6 +19,11 @@ class Person extends Component {
       {url:'./person_images/photos/dog8.jpg',description:'심심해ㅐ'},
       {url:'./person_images/photos/dog9.jpg',description:'뀨옹'},
       {url:'./person_images/photos/dog10.jpg',description:'졸려ㅕ'}
+    ],
+    likes:[
+      {url:'./person_images/photos/dog8.jpg',name:'양',gender:'남'},
+      {url:'./person_images/photos/dog9.jpg',name:'초',gender:'남'},
+      {url:'./person_images/photos/dog6.jpg',name:'다',gender:'남'}
     ]
   }
 
@@ -40,7 +45,7 @@ class Person extends Component {
           </TabList>
           <TabPanel>
             <div className="patInfo">
-              <Profile/>
+              <Profile likes={this.state.likes}/>
               <Menu photos={this.state.photos}/>
             </div>
           </TabPanel>

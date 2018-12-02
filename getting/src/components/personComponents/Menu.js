@@ -34,7 +34,7 @@ class Menu extends Component {
             />
             <CardBody>
               <CardTitle><strong>좋아요</strong> </CardTitle>
-              <CardText>
+              <CardText className="diary-comments">
                 {photo.description}
               </CardText>
               <CardText>
@@ -62,7 +62,32 @@ class Menu extends Component {
     } else if (this.state.menuBtn === "families") {
       menuState = <div className="families" />;
     } else {
-      menuState = <div className="visitors" />;
+      menuState = (
+        <div className="visitors">
+          <div>
+            <input type="textarea" className="visitorsInput" />
+            <Button color="success">글남기기</Button>
+          </div>
+          <div className="comments">
+            <div className="headComment">
+              <img
+                src="./person_images/photos/animal-prints.png"
+                className="foot"
+              />
+              <strong>양초다</strong>
+            </div>
+            <hr className="hrs" />
+            <div className="bodyComment">
+              <img
+                src="./person_images/photos/profileTest.jpg"
+                className="proImg"
+              />
+              사진들 잘 보고갑니다~~
+            </div>
+          </div>
+        </div>
+      );
+
     }
     return (
       <div className="menu">

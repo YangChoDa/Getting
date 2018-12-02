@@ -3,3 +3,48 @@
     min-width: 250px;
     float:left;
 }
+
+small{
+    cursor: pointer;
+}
+
+.visitorsInput{
+    height:31px;
+    width:90%;
+    margin-right:10px;
+}
+
+.comments{
+    width:100%;
+    height:30vh;
+    border:solid 1px;
+}
+
+.headComment{
+    width:100%;
+    height:10vh;
+}
+
+.bodyComment{
+    width:100%;
+    height:100%;
+}
+
+.foot{
+    width:50px;
+    margin:10px;
+}
+
+.hrs{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.proImg{
+    width:100px;
+    margin:10px;
+    border-radius: 50%;
+}
+.diary-comments{
+    color:black;
+}
