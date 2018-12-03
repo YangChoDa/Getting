@@ -141,7 +141,7 @@ class Login extends Component {
             return (
               <div className="cardList" key={i}>
                 <Card>
-                  <Link to="/person">
+                  <Link to="/person/bishong">
                   <CardImg
                     className="cardImg"
                     src={photo.url}

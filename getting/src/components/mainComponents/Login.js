@@ -154,7 +154,10 @@ class Login extends Component {
                 <input Name="Password" placeholder="Password" required="" />
                 <label />
               </div>
-              <button class="signupB"> Sign Up</button>
+
+              <button class="signupB" onClick={()=>{
+                this.setTabState("SignIn");
+              }}> Sign Up</button>
             </form>
           </div>
         </div>

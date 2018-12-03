@@ -53,7 +53,7 @@ class Menu extends Component {
         <div className="comments">
             <div className="headComment">
               <img
-                src="./person_images/photos/animal-prints.png"
+                src="../person_images/photos/animal-prints.png"
                 className="foot"
                 alt="footImage"
               />

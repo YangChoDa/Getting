@@ -4,6 +4,7 @@ import "./Profile.css";
 
 class Profile extends Component {
   likes = [];
+  profileInfo;
 
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ class Profile extends Component {
       );
     });
 
+    this.profileInfo = props.profileInfo;
     this.state = {
       isLike:true
     }
@@ -35,7 +37,7 @@ class Profile extends Component {
         <div className="likeInfo">
           <div className="likeImgDiv">
             <Link to="/person">
-              <img src="./images/pat1.png" className="likeImg" alt="profile" />
+              <img src="../images/pat1.png" className="likeImg" alt="profile" />
             </Link>
           </div>
           <div className="likeInfoName">
@@ -53,20 +55,20 @@ class Profile extends Component {
     return (
       <div className="profile">
         <div className="profileImg">
-          <img src="./images/bishong1.png" className="profile-img" />
+          <img src={this.profileInfo.url} className="profile-img" />
         </div>
         <div className="profileInfo">
           <div className="profileInfoes">
-            <p className="pStyle">견종 : 비숑</p>
-            <p className="pStyle">나이 : 4살</p>
-            <p className="pStyle">성별 : 남</p>
+            <p className="pStyle">견종 : {this.profileInfo.thick}</p>
+            <p className="pStyle">나이 : {this.profileInfo.age}</p>
+            <p className="pStyle">성별 : {this.profileInfo.gender}</p>
           </div>
           <hr className="hrs" />
           <div className="likes">
             <div className="boneImg">
-              <Link to="/person">
+              <Link to="/person/bishong">
                 <img
-                  src="./person_images/bone.png"
+                  src="../person_images/bone.png"
                   className="bone"
                   alt="like"
                   onClick={this.add}

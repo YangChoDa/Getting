@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import {Link} from 'react-router-dom';
 import "react-tabs/style/react-tabs.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./family.css";
@@ -68,7 +69,7 @@ export default class family extends Component {
                   <div className="child">
                     {this.state.families.map((photo) => {  
                       if(photo.family_type === 'children'){
-                        return (<img src={photo.url} className="child-img" alt="" />)
+                        return (<Link to="/person/children"><img src={photo.url} className="child-img" alt="" /></Link>)
                       }
                     })}
                   </div>
