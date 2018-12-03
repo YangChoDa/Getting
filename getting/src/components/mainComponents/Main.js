@@ -62,8 +62,8 @@ class Login extends Component {
                     
                     <CardBody>
                       <CardTitle>Card Title</CardTitle>
-                      <CardText>
-                        ddd
+                      <CardText className="pTag">
+                        {photo.description}
                       </CardText>
                       <CardText>
                         <small className="text-muted">
