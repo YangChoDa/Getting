@@ -76,6 +76,7 @@
 .likeImg{
     width:50px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .likeInfoName{
     text-align: center;
