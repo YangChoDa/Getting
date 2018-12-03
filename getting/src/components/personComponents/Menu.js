@@ -10,11 +10,9 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
   Button
 } from "reactstrap";
 import "./Menu.css";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -57,6 +55,7 @@ class Menu extends Component {
               <img
                 src="./person_images/photos/animal-prints.png"
                 className="foot"
+                alt="footImage"
               />
               <strong>{visitor.name}</strong>
             </div>
@@ -65,6 +64,7 @@ class Menu extends Component {
               <img
                 src={visitor.profileImg}
                 className="proImg"
+                alt="profileImg"
               />
               {visitor.comments}
             </div>
