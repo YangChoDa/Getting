@@ -21,49 +21,57 @@ class Profile extends Component {
         </div>
       );
     });
+
+    this.state = {
+      isLike:true
+    }
   }
 
-  add(value) {
-    console.log(value);
-    value.push(
-      <div className="likeInfo">
-        <div className="likeImgDiv">
-          <Link to="/person">
-            <img
-              src="./person_images/photos/dog9.jpg"
-              className="likeImg"
-              alt="profile"
-            />
-          </Link>
+  add = () => {
+    this.setState({isLike:!this.state.isLike});
+    console.log(this.state.isLike);
+    if(this.state.isLike){
+      this.likes.push(
+        <div className="likeInfo">
+          <div className="likeImgDiv">
+            <Link to="/person">
+              <img src="./images/pat1.png" className="likeImg" alt="profile" />
+            </Link>
+          </div>
+          <div className="likeInfoName">
+            <strong>인절미</strong>
+          </div>
         </div>
-        <div className="likeInfoName">
-          <strong>드림</strong>
-        </div>
-      </div>
-    );
+      );
+    }else{
+      this.likes.pop();
+    }
+    
   };
 
   render() {
     return (
       <div className="profile">
         <div className="profileImg">
-          <img src="./images/pat1.png" className="profile-img" />
+          <img src="./images/bishong1.png" className="profile-img" />
         </div>
         <div className="profileInfo">
           <div className="profileInfoes">
-            <p className="pStyle">견종 : 포메라니안</p>
-            <p className="pStyle">나이 : 2살</p>
-            <p className="pStyle">성별 : 여</p>
+            <p className="pStyle">견종 : 비숑</p>
+            <p className="pStyle">나이 : 4살</p>
+            <p className="pStyle">성별 : 남</p>
           </div>
           <hr className="hrs" />
           <div className="likes">
             <div className="boneImg">
-              <img
-                src="./person_images/bone.png"
-                className="bone"
-                alt="like"
-                onClick={this.add(this.likes)}
-              />
+              <Link to="/person">
+                <img
+                  src="./person_images/bone.png"
+                  className="bone"
+                  alt="like"
+                  onClick={this.add}
+                />
+              </Link>
             </div>
             <div className="likeInfoes">{this.likes}</div>
           </div>
