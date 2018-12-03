@@ -11,21 +11,18 @@ class Person extends Component {
   state = {
     photos: [
       {
-        url: "./person_images/photos/dog1.jpg",
+        url: "./person_images/photos/b1.jpg",
         description: "귀귀귀요미 일상"
       },
-      { url: "./person_images/photos/dog2.jpg", description: "뭘 원하니" },
-      { url: "./person_images/photos/dog3.jpg", description: "햇살 쨍쨍" },
+      { url: "./person_images/photos/b2.jpg", description: "오랫만에 가족나들이" },
+      { url: "./person_images/photos/b3.jpg", description: "요즘 대세가 미니언즈라지?" },
       {
-        url: "./person_images/photos/dog4.jpg",
-        description: "간식준다니 헤헿"
+        url: "./person_images/photos/b4.jpg",
+        description: "자다 일어나서"
       },
-      { url: "./person_images/photos/dog5.jpg", description: "잠온다아ㅏ" },
-      { url: "./person_images/photos/dog6.jpg", description: "카페왔다ㅏ" },
-      { url: "./person_images/photos/dog7.jpg", description: "친구왔다ㅏ" },
-      { url: "./person_images/photos/dog8.jpg", description: "심심해ㅐ" },
-      { url: "./person_images/photos/dog9.jpg", description: "뀨옹" },
-      { url: "./person_images/photos/dog10.jpg", description: "졸려ㅕ" }
+      { url: "./person_images/photos/b5.jpg", description: "즉등히흐라" },
+      { url: "./person_images/photos/b7.jpg", description: "개껌~" },
+      { url: "./person_images/photos/b9.jpg", description: "바람이....." },
     ],
     likes: [
       { url: "./person_images/photos/dog8.jpg", name: "양", gender: "남" },
@@ -51,13 +48,13 @@ class Person extends Component {
     ],
     families: [
       {
-        father: { url: "./images/pat1.png", name: "인절미" },
-        mother: { url: "./person_images/photos/dog10.jpg", name: "초롱이" },
+        father: { url: "./images/bishong1.png", name: "설탕" },
+        mother: { url: "./person_images/photos/bishong2.jpg", name: "숑이" },
         children: [
-          { url: "./person_images/photos/dog6.jpg", name: "아롱이" },
-          { url: "./person_images/photos/dog4.jpg", name: "다롱이" },
-          { url: "./person_images/photos/dog8.jpg", name: "새롱이" },
-          { url: "./person_images/photos/dog9.jpg", name: "메롱이" }
+          { url: "./person_images/photos/bs1.jpg", name: "아롱이" },
+          { url: "./person_images/photos/bs2.jpg", name: "다롱이" },
+          { url: "./person_images/photos/bs3.jpg", name: "새롱이" },
+          { url: "./person_images/photos/bs4.jpg", name: "메롱이" }
         ]
       }
     ]
@@ -68,7 +65,7 @@ class Person extends Component {
         <div className="personPage">
           <Tabs>
             <TabList>
-              <Tab>인절미</Tab>
+              <Tab>설탕</Tab>
             </TabList>
             <TabPanel>
               <div className="patInfo">
