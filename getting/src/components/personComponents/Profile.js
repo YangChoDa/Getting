@@ -21,26 +21,32 @@ class Profile extends Component {
         </div>
       );
     });
+
+    this.state = {
+      isLike:true
+    }
   }
 
-  add = (value) => {
-    console.log(this.likes);
-    value.push(
-      <div className="likeInfo">
-        <div className="likeImgDiv">
-          <Link to="/person">
-            <img
-              src="./images/pat1.png"
-              className="likeImg"
-              alt="profile"
-            />
-          </Link>
+  add = () => {
+    this.setState({isLike:!this.state.isLike});
+    console.log(this.state.isLike);
+    if(this.state.isLike){
+      this.likes.push(
+        <div className="likeInfo">
+          <div className="likeImgDiv">
+            <Link to="/person">
+              <img src="./images/pat1.png" className="likeImg" alt="profile" />
+            </Link>
+          </div>
+          <div className="likeInfoName">
+            <strong>인절미</strong>
+          </div>
         </div>
-        <div className="likeInfoName">
-          <strong>인절미</strong>
-        </div>
-      </div>
-    );
+      );
+    }else{
+      this.likes.pop();
+    }
+    
   };
 
   render() {
@@ -58,12 +64,14 @@ class Profile extends Component {
           <hr className="hrs" />
           <div className="likes">
             <div className="boneImg">
-              <img
-                src="./person_images/bone.png"
-                className="bone"
-                alt="like"
-                onClick={this.add(this.likes)}
-              />
+              <Link to="/person">
+                <img
+                  src="./person_images/bone.png"
+                  className="bone"
+                  alt="like"
+                  onClick={this.add}
+                />
+              </Link>
             </div>
             <div className="likeInfoes">{this.likes}</div>
           </div>
