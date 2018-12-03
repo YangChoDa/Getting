@@ -35,7 +35,7 @@ export default class MyPage extends Component {
   render() {
     return (
       <PageTemplate>
-        <div>
+        <div className="buttonList">
           <Button
             onClick={() => this.setValue("profile")}
             outline
@@ -71,8 +71,8 @@ export default class MyPage extends Component {
           >
             edit Profile
           </Button>
-          {this.showView()}
         </div>
+        {this.showView()}
       </PageTemplate>
     );
   }

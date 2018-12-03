@@ -46,7 +46,7 @@ export default class family extends Component {
 
   render() {
     return (
-      <Tabs>
+      <Tabs className="tab-div">
         <TabList>
           <Tab>my pet 1</Tab>
           <Tab>my pet 2</Tab>
