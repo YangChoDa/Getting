@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Profile.css";
 
 class Profile extends Component {
@@ -10,7 +11,9 @@ class Profile extends Component {
       return (
         <div className="likeInfo">
           <div className="likeImgDiv">
-            <img src={like.url} className="likeImg"></img>
+            <Link to="/person">
+              <img src={like.url} className="likeImg" />
+            </Link>
           </div>
           <div className="likeInfoName">
             <strong>{like.name}</strong>
@@ -19,6 +22,26 @@ class Profile extends Component {
       );
     });
   }
+
+  add(value) {
+    console.log(value);
+    value.push(
+      <div className="likeInfo">
+        <div className="likeImgDiv">
+          <Link to="/person">
+            <img
+              src="./person_images/photos/dog9.jpg"
+              className="likeImg"
+              alt="profile"
+            />
+          </Link>
+        </div>
+        <div className="likeInfoName">
+          <strong>드림</strong>
+        </div>
+      </div>
+    );
+  };
 
   render() {
     return (
@@ -35,11 +58,14 @@ class Profile extends Component {
           <hr className="hrs" />
           <div className="likes">
             <div className="boneImg">
-              <img src="./person_images/bone.png" className="bone" />
+              <img
+                src="./person_images/bone.png"
+                className="bone"
+                alt="like"
+                onClick={this.add(this.likes)}
+              />
             </div>
-            <div className="likeInfoes">
-              {this.likes}
-            </div>
+            <div className="likeInfoes">{this.likes}</div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardBody, Button, CardTitle, CardText, CardImg } from "reactstrap";
+import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 import "./diaryList.css";
 
 export default class diaryList extends Component {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./profile.css";
 import SelfModal from "./selfModal";
+import {Link} from 'react-router-dom';
 
 class Profile extends Component {
   likes = [];
@@ -11,7 +12,9 @@ class Profile extends Component {
     this.likes = props.likes.map(like => {
       return (
         <div className="likeInfo">
+          <Link to="/person">
           <img src={like.url} className="likeImg" alt=""></img>
+          </Link>
           <strong>{like.name}</strong>({like.gender})
         </div>
       );

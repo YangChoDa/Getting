@@ -57,7 +57,7 @@ export default class family extends Component {
               <div className="div-outer">
                 <div className="div-inner">
                   <div className="parents">
-                    {this.state.families.map((photo, i) => {
+                    {this.state.families.map((photo) => {
                       if(photo.family_type === 'father'){
                         return (<img src={photo.url} className="parents-img" alt="" />)
                       } else if(photo.family_type === 'mother'){
@@ -66,7 +66,7 @@ export default class family extends Component {
                     })}
                   </div>
                   <div className="child">
-                    {this.state.families.map((photo, i) => {  
+                    {this.state.families.map((photo) => {  
                       if(photo.family_type === 'children'){
                         return (<img src={photo.url} className="child-img" alt="" />)
                       }
