@@ -74,20 +74,6 @@ class Login extends Component {
           age: "3살"
         },
         {
-          url: "./person_images/photos/golden2.jpg",
-          name: "루키",
-          gender: "./person_images/photos/male.png",
-          thick: "골든리트리버",
-          age: "3살"
-        },
-        {
-          url: "./person_images/photos/mal1.jpg",
-          name: "우디",
-          gender: "./person_images/photos/male.png",
-          thick: "말티즈",
-          age: "5살"
-        },
-        {
           url: "./person_images/photos/bishong2.jpg",
           name: "숑이",
           gender: "./person_images/photos/female.png",
@@ -139,7 +125,7 @@ class Login extends Component {
         <div className="card-container">
           {this.state.photos.map((photo, i) => {
             return (
-              <div className="cardList" key={i}>
+              <div className="cardList" id="cardList" key={i}>
                 <Card>
                   <Link to="/person/bishong">
                   <CardImg
