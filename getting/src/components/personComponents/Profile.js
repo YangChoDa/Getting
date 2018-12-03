@@ -23,21 +23,21 @@ class Profile extends Component {
     });
   }
 
-  add(value) {
-    console.log(value);
+  add = (value) => {
+    console.log(this.likes);
     value.push(
       <div className="likeInfo">
         <div className="likeImgDiv">
           <Link to="/person">
             <img
-              src="./person_images/photos/dog9.jpg"
+              src="./images/pat1.png"
               className="likeImg"
               alt="profile"
             />
           </Link>
         </div>
         <div className="likeInfoName">
-          <strong>드림</strong>
+          <strong>인절미</strong>
         </div>
       </div>
     );

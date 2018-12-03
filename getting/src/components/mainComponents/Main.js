@@ -141,12 +141,13 @@ class Login extends Component {
             return (
               <div className="cardList" key={i}>
                 <Card>
+                  <Link to="/person">
                   <CardImg
                     className="cardImg"
                     src={photo.url}
                     alt="Card image cap"
                   />
-
+                  </Link>
                   <CardBody>
                     <CardTitle>
                       이름: {photo.name}{" "}
@@ -163,7 +164,6 @@ class Login extends Component {
             );
           })}
         </div>
-        >>>>>>> 69a423688f7b6a56bf9b3f059de7693c1402f60c
       </PageTemplate>
     );
   }
