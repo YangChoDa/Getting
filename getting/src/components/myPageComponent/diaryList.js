@@ -24,7 +24,7 @@ export default class diaryList extends Component {
 
   render() {
     return (
-      <div className="card-container">
+      <div className="card-container" id="card-container">
         {this.state.photos.map((photo, i) => {
           return (
             <div className="cardList" key={i}>

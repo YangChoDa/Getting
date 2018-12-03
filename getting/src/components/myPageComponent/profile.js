@@ -8,10 +8,6 @@ class Profile extends Component {
 
   constructor(props) {
     super(props);
-    // this.state = {
-    //   buttonLabel: "Edit Profile",
-    //   className: "btn btn-danger"
-    // }
 
     this.likes = props.likes.map(like => {
       return (
@@ -28,7 +24,6 @@ class Profile extends Component {
 
     return (
       <div className="profile">
-      <SelfModal />
         <div className="profileImg">
           <img src="./images/pat1.png" className="profile-img" alt=""/>
         </div>
@@ -37,6 +32,7 @@ class Profile extends Component {
             <p className="pStyle">견종 : 포메라니안</p>
             <p className="pStyle">나이 : 2살</p>
             <p className="pStyle">성별 : 여</p>
+            <SelfModal />
           </div>
           <hr className="hrs" />
           <div className="likes">
