@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./myPage.css";
 import Profile from "./Person";
 import Diaries from "./diaryList";
-import EditProfile from "./editProfile";
 import Family from "./family";
 import GuestBook from "./guestBook";
 import PageTemplate from "../common/PageTemplate/PageTemplate";
@@ -29,7 +28,6 @@ export default class MyPage extends Component {
     if (this.state.menuBtn === "diaries") return <Diaries />;
     if (this.state.menuBtn === "family") return <Family />;
     if (this.state.menuBtn === "guestBook") return <GuestBook />;
-    if (this.state.menuBtn === "edit Profile") return <EditProfile />;
   };
 
   render() {
@@ -63,13 +61,6 @@ export default class MyPage extends Component {
             color="success"
           >
             guestBook
-          </Button>
-          <Button
-            onClick={() => this.setValue("edit Profile")}
-            outline
-            color="info"
-          >
-            edit Profile
           </Button>
         </div>
         {this.showView()}
