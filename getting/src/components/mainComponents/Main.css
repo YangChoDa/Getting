@@ -1,0 +1,38 @@
+input[type="checkbox"] {
+   display: none;
+}
+input[type="checkbox"] + label {
+    color: grey;
+    cursor: pointer;
+    padding: 0 18px 0 18px;
+}
+input[type="checkbox"] + label:hover {
+    color: rgb(250, 168, 209);
+}
+input[type="checkbox"]:checked + label {
+    color: rgb(255, 105, 180);
+}
+.chkBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-bottom: 1px solid darkgrey;
+    margin: 0 0 10px 0;
+}
+.cardList{
+    width:27vh;
+    float:left;
+}
+.card-container{
+    width: 100%;
+    height: 1080px;
+    margin: 10px;
+    margin-left: 9%;
+    padding: 10px 20px;
+}
+
+.cardImg{
+    min-width: 25vh;
+    height: 300px;
+}
