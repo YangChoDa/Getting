@@ -29,13 +29,13 @@ export default class guestBook extends Component {
         return(
           <div className="comments"  id="comments">
             <div className="headComment" id="headComment">
-              <img src={visitor.profileImg}
+              <img src="../person_images/photos/animal-prints.png"
               className="foot" alt="" />
               <strong>{visitor.name}</strong>
             </div>
             <hr className="hrs" />
             <div className="bodyComment">
-              <img src="./person_images/photos/profileTest.jpg" className="proImg" alt="" />
+              <img src={visitor.profileImg} className="proImg" alt="" />
                 {visitor.comments}
             </div>
           </div>
