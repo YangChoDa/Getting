@@ -31,6 +31,35 @@ class Person extends Component {
       { url: "./person_images/photos/dog8.jpg", name: "양", gender: "남" },
       { url: "./person_images/photos/dog9.jpg", name: "초", gender: "남" },
       { url: "./person_images/photos/dog6.jpg", name: "다", gender: "남" }
+    ],
+    visitors: [
+      {
+        profileImg: "./person_images/photos/dog8.jpg",
+        name: "다니",
+        comments: "사진 잘 보고 가요!!"
+      },
+      {
+        profileImg: "./person_images/photos/dog9.jpg",
+        name: "초롱이",
+        comments: "강아지가 너무 이쁘네요~잘보고 갑니다^^"
+      },
+      {
+        profileImg: "./person_images/photos/dog6.jpg",
+        name: "쫑아",
+        comments: "너무 귀여워요 ㅠㅠ"
+      }
+    ],
+    families: [
+      {
+        father: { url: "./images/pat1.png", name: "인절미" },
+        mother: { url: "./person_images/photos/dog10.jpg", name: "초롱이" },
+        children: [
+          { url: "./person_images/photos/dog6.jpg", name: "아롱이" },
+          { url: "./person_images/photos/dog4.jpg", name: "다롱이" },
+          { url: "./person_images/photos/dog8.jpg", name: "새롱이" },
+          { url: "./person_images/photos/dog9.jpg", name: "메롱이" }
+        ]
+      }
     ]
   };
 
@@ -49,8 +78,8 @@ class Person extends Component {
             <TabPanel>
               <div className="patInfo">
                 <Profile likes={this.state.likes} />
-                <Menu photos={this.state.photos} />
-              </div>
+                <Menu photos={this.state.photos} visitors={this.state.visitors} families={this.state.families}  />
+              </div>  
             </TabPanel>
             <TabPanel>
               <h2>Any content 2</h2>

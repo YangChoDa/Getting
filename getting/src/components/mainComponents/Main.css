@@ -17,11 +17,11 @@ input[type="checkbox"]:checked + label {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid #3A5A98;
     margin: 0 0 10px 0;
 }
 .cardList{
-    width:27vh;
+    width:20%;
     float:left;
 }
 .card-container{
@@ -35,10 +35,12 @@ input[type="checkbox"]:checked + label {
     min-width: 25vh;
     height: 300px;
 }
+
 .genderImage{
     width: 7%;
     height: 7%;
 }
 .text1 {
     color: black;
+
 }
