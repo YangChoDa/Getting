@@ -14,10 +14,14 @@ import {
   Button
 } from "reactstrap";
 import "./Menu.css";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Menu extends Component {
   photos = [];
+  visitors=[];
+  families = [];
 
   constructor(props) {
     super(props);
@@ -34,7 +38,7 @@ class Menu extends Component {
             />
             <CardBody>
               <CardTitle><strong>좋아요</strong> </CardTitle>
-              <CardText>
+              <CardText className="diary-comments">
                 {photo.description}
               </CardText>
               <CardText>
@@ -45,6 +49,50 @@ class Menu extends Component {
         </div>
       );
     });
+
+    this.visitors = props.visitors.map(visitor => {
+      return (
+        <div className="comments">
+            <div className="headComment">
+              <img
+                src="./person_images/photos/animal-prints.png"
+                className="foot"
+              />
+              <strong>{visitor.name}</strong>
+            </div>
+            <hr className="hrs" />
+            <div className="bodyComment">
+              <img
+                src={visitor.profileImg}
+                className="proImg"
+              />
+              {visitor.comments}
+            </div>
+          </div>
+      );
+    })
+
+    this.families = props.families.map(family => {
+      return (
+        <div className="div-body">
+            <div className="div-container">
+              <div className="div-outer">
+                <div className="div-inner">
+                  <div className="parents">
+                    <img src={family.father.url} className="parents-img" alt="" />
+                    <img src={family.mother.url} className="parents-img" alt="" />
+                  </div>
+                  <div className="child">
+                    {family.children.map(child => {  
+                      return <img src={child.url} className="child-img" alt="" />;
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      );
+    })
     this.state = {
       menuBtn: "diaries"
     };
@@ -60,12 +108,25 @@ class Menu extends Component {
     if (this.state.menuBtn === "diaries") {
       menuState = <div className="diaries">{this.photos}</div>;
     } else if (this.state.menuBtn === "families") {
-      menuState = <div className="families" />;
+      menuState = (
+      <div className="families">
+        {this.families}
+      </div>
+      );
     } else {
-      menuState = <div className="visitors" />;
+      menuState = (
+        <div className="visitors">
+          <div>
+            <input type="textarea" className="visitorsInput" />
+            <Button color="success">글남기기</Button>
+          </div>
+          {this.visitors}
+        </div>
+      );
+
     }
     return (
-      <div className="menu">
+      <div className="menus">
         <ButtonToolbar>
           <ToggleButtonGroup
             type="radio"

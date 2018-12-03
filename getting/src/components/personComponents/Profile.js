@@ -1,11 +1,24 @@
 import React, { Component } from "react";
-import './Profile.css';
+import "./Profile.css";
 
 class Profile extends Component {
+  likes = [];
+
   constructor(props) {
     super(props);
+    this.likes = props.likes.map(like => {
+      return (
+        <div className="likeInfo">
+          <div className="likeImgDiv">
+            <img src={like.url} className="likeImg"></img>
+          </div>
+          <div className="likeInfoName">
+            <strong>{like.name}</strong>
+          </div>
+        </div>
+      );
+    });
   }
-
 
   render() {
     return (
@@ -14,9 +27,20 @@ class Profile extends Component {
           <img src="./images/pat1.png" className="profile-img" />
         </div>
         <div className="profileInfo">
-          <p>견종 : 포메라니안</p>
-          <p>나이 : 2살</p>
-          <p>성별 : 여</p>
+          <div className="profileInfoes">
+            <p className="pStyle">견종 : 포메라니안</p>
+            <p className="pStyle">나이 : 2살</p>
+            <p className="pStyle">성별 : 여</p>
+          </div>
+          <hr className="hrs" />
+          <div className="likes">
+            <div className="boneImg">
+              <img src="./person_images/bone.png" className="bone" />
+            </div>
+            <div className="likeInfoes">
+              {this.likes}
+            </div>
+          </div>
         </div>
       </div>
     );

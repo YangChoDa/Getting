@@ -1,9 +1,14 @@
+.person_header{
+    width:100%;
+    height:10%;
+}
+
 .logo_img{
     width:5%;
 }
 
 .personPage{
-    width:95%;
+    width:100%;
     height:80%;
     margin-left:2%;
     margin-right:2%;

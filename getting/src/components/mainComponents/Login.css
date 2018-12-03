@@ -75,7 +75,7 @@ label::before {
 form button {
   position: relative;
   margin: 15px 10px 0 0;
-  left: 53%;
+  left: 45%;
   transform: translateX(-50%);
   background: #58a4b0;
   border: none;

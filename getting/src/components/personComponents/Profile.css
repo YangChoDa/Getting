@@ -1,8 +1,9 @@
 
 .profile{
     width:100%;
-    height:50vh;
+    height:70%;
     border:solid 1px;
+    position:relative;
 }
 
 .profile-img{
@@ -13,17 +14,75 @@
 }
 
 .profileInfo{
-    margin-left:10%;
-    margin-top:3%;
-    float:left;
+    position: absolute;
+    width:70%;
+    height:100%;
+    right:0;
+    margin:0;
 }
 
 .profileImg{
-    float:left;
-    height:100%;
+    position: absolute;
+    left:0;
+    width:30%;
 }
 
 .patInfo{
-    height:100%;
+    height:70vh;
     width:100%;
+}
+
+.pStyle{
+    color:black;
+}
+
+.profileInfoes{
+    height:50%;
+    padding-top:5%;
+}
+
+.likes{
+    height:50%;
+}
+
+.bone{
+    position: absolute;
+    left:5%;
+    top:5%;
+    cursor: pointer;
+}
+
+.boneImg{
+    position: relative;
+    height:50%;
+}
+
+.likeInfoes{
+    height:50%;
+}
+
+.likeInfo{
+    width:10%;
+    float:left;
+    margin:10px;
+}
+
+.likeImgDiv{
+    width:100%;
+    height:70%;
+    text-align: center;
+}
+
+.likeImg{
+    width:50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.likeInfoName{
+    text-align: center;
+}
+
+.hrs{
+    margin:0;
+    border:solid 0.5px black;
 }
