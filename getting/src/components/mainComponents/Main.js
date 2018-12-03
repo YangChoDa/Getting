@@ -9,16 +9,18 @@ class Login extends Component {
 
     this.state = {
         photos: [
-          { url: "./person_images/photos/dog1.jpg", description: "귀귀귀요미 일상" },
-          { url: "./person_images/photos/dog2.jpg", description: "뭘 원하니" },
-          { url: "./person_images/photos/dog3.jpg", description: "햇살 쨍쨍" },
-          { url: "./person_images/photos/dog4.jpg", description: "간식준다니 헤헿" },
-          { url: "./person_images/photos/dog5.jpg", description: "잠온다아ㅏ" },
-          { url: "./person_images/photos/dog6.jpg", description: "카페왔다ㅏ" },
-          { url: "./person_images/photos/dog7.jpg", description: "친구왔다ㅏ" },
-          { url: "./person_images/photos/dog8.jpg", description: "심심해ㅐ" },
-          { url: "./person_images/photos/dog9.jpg", description: "뀨옹" },
-          { url: "./person_images/photos/dog10.jpg", description: "졸려ㅕ" }
+          { url: "./person_images/photos/bishong1.png", name: "설탕", gender: "./person_images/photos/male.png", thick: "비숑", age: "4살" },
+          { url: "./person_images/photos/mal2.jpg", name: "콩이", gender: "./person_images/photos/female.png", thick: "말티즈", age: "6살" },
+          { url: "./person_images/photos/dog4.jpg", name: "코코", gender: "./person_images/photos/male.png", thick: "포메라니안", age: "3살" },
+          { url: "./person_images/photos/siba1.jpg", name: "세리", gender: "./person_images/photos/female.png", thick: "시바견", age: "2살" },
+          { url: "./person_images/photos/golden1.jpg", name: "베일리", gender: "./person_images/photos/female.png", thick: "골든리트리버", age: "2살" },
+          { url: "./person_images/photos/siba2.jpg", name: "보리", gender: "./person_images/photos/male.png", thick: "시바견", age: "5살" },
+          { url: "./person_images/photos/daks2.jpg", name: "초코", gender: "./person_images/photos/male.png", thick: "닥스훈트", age: "3살" },
+          { url: "./person_images/photos/dog7.jpg", name: "똘이", gender: "./person_images/photos/female.png", thick: "포메라니안", age: "4살" },
+          { url: "./person_images/photos/daks1.jpg", name: "까미", gender: "./person_images/photos/female.png", thick: "닥스훈트", age: "3살" },
+          { url: "./person_images/photos/golden2.jpg", name: "루키", gender: "./person_images/photos/male.png", thick: "골든리트리버", age: "3살" },
+          { url: "./person_images/photos/mal1.jpg", name: "우디", gender: "./person_images/photos/male.png", thick: "말티즈", age: "5살" },
+          { url: "./person_images/photos/bishong2.jpg", name: "숑이", gender: "./person_images/photos/female.png", thick: "비숑", age: "2살" }
         ]
       };
   }
@@ -61,14 +63,9 @@ class Login extends Component {
                     <CardImg className="cardImg" src={photo.url} alt="Card image cap" />
                     
                     <CardBody>
-                      <CardTitle>Card Title</CardTitle>
+                      <CardTitle>이름: {photo.name} <img src={photo.gender} className="genderImage"/></CardTitle>
                       <CardText>
-                        ddd
-                      </CardText>
-                      <CardText>
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
+                        <p class="text1">견종: {photo.thick}     나이: {photo.age}</p> 
                       </CardText>
                     </CardBody>
                   </Card>

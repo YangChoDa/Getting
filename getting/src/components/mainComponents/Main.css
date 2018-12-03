@@ -26,13 +26,19 @@ input[type="checkbox"]:checked + label {
 }
 .card-container{
     width: 100%;
-    height: 1080px;
+    height: 100%;
     margin: 10px;
     margin-left: 9%;
     padding: 10px 20px;
 }
-
 .cardImg{
     min-width: 25vh;
     height: 300px;
+}
+.genderImage{
+    width: 7%;
+    height: 7%;
+}
+.text1 {
+    color: black;
 }
