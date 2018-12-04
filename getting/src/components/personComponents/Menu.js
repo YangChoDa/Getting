@@ -136,7 +136,7 @@ class Menu extends Component {
           >
             <ToggleButton value="diaries">Diary</ToggleButton>
             <ToggleButton value="families">Family</ToggleButton>
-            <ToggleButton value="visitors">방명록</ToggleButton>
+            <ToggleButton value="visitors">GuestBook</ToggleButton>
           </ToggleButtonGroup>
         </ButtonToolbar>
         {menuState}

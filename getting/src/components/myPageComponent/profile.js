@@ -23,7 +23,7 @@ class Profile extends Component {
   render() {
 
     return (
-      <div className="profile">
+      <div className="mypageprofile">
         <div className="profileImg">
           <img src="./images/pat1.png" className="profile-img" alt=""/>
         </div>
