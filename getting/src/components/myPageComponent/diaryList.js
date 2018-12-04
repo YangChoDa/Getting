@@ -7,7 +7,7 @@ export default class diaryList extends Component {
     super(props);
 
     this.state = {
-      photos: [
+      diaries: [
         { url: "./person_images/photos/dog1.jpg", description: "귀귀귀요미 일상" },
         { url: "./person_images/photos/dog2.jpg", description: "뭘 원하니" },
         { url: "./person_images/photos/dog3.jpg", description: "햇살 쨍쨍" },
@@ -25,14 +25,14 @@ export default class diaryList extends Component {
   render() {
     return (
       <div className="card-container" id="card-container">
-        {this.state.photos.map((photo, i) => {
+        {this.state.diaries.map((diary, i) => {
           return (
             <div className="cardList" key={i}>
               <Card>
-                <CardImg className="cardImg" src={photo.url} alt="Card image cap" />
+                <CardImg className="cardImg" src={diary.url} alt="Card image cap" />
                 
                 <CardBody>
-                  <CardTitle>Card Title</CardTitle>
+                  <CardTitle>{diary.description}</CardTitle>
                   <CardText>
                     ddd
                   </CardText>
