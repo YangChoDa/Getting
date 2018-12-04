@@ -59,7 +59,7 @@ class Login extends Component {
                 <label />
               </div>
             </center>
-            <Link to="/">
+            <Link to="/main">
               <button> Sign In</button>
             </Link>
             <div class="social-signin">
