@@ -16,3 +16,23 @@
     height: 300px;
 }
 
+.plus{
+    width:20%;
+    float:left;
+    height: 300px;
+}
+
+#plusCard{
+    height: 410px;
+    display:table-cell; vertical-align:middle; text-align:center;
+}
+
+#plusImg{
+    width: 50%;
+}
+
+
+
+
+
+

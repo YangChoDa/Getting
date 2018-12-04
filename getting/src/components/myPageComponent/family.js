@@ -10,7 +10,7 @@ export default class family extends Component {
     super(props);
 
     this.state = {
-      families: [
+      family1: [
         {
           url: './images/pat1.png',
           family_type: 'father',
@@ -41,6 +41,38 @@ export default class family extends Component {
           family_type: 'children',
           name: '메롱이',
         }
+      ],
+      family2: [
+        {
+          url: './images/pat1.png',
+          family_type: 'father',
+          name: '인절미',
+        },
+        {
+          url: './person_images/photos/siba1.jpg',
+          family_type: 'mother',
+          name: '시바',
+        },
+        {
+          url: './person_images/photos/dog4.jpg',
+          family_type: 'children',
+          name: '다롱이',
+        },
+        {
+          url: './person_images/photos/dog6.jpg',
+          family_type: 'children',
+          name: '아롱이',
+        },
+        {
+          url: './person_images/photos/dog8.jpg',
+          family_type: 'children',
+          name: '새롱이',
+        },
+        {
+          url: './person_images/photos/dog9.jpg',
+          family_type: 'children',
+          name: '메롱이',
+        }
       ]
     }
   }
@@ -49,8 +81,8 @@ export default class family extends Component {
     return (
       <Tabs className="tab-div">
         <TabList>
-          <Tab>my pet 1</Tab>
-          <Tab>my pet 2</Tab>
+          <Tab>family1</Tab>
+          <Tab>family2</Tab>
         </TabList>
         <TabPanel>
           <div className="div-body">
@@ -58,18 +90,18 @@ export default class family extends Component {
               <div className="div-outer">
                 <div className="div-inner">
                   <div className="parents">
-                    {this.state.families.map((photo) => {
-                      if(photo.family_type === 'father'){
-                        return (<img src={photo.url} className="parents-img" alt="" />)
-                      } else if(photo.family_type === 'mother'){
-                        return (<img src={photo.url} className="parents-img" alt="" />)
+                    {this.state.family1.map((family) => {
+                      if(family.family_type === 'father'){
+                        return (<img src={family.url} className="parents-img" alt="" />)
+                      } else if(family.family_type === 'mother'){
+                        return (<img src={family.url} className="parents-img" alt="" />)
                       }
                     })}
                   </div>
                   <div className="child">
-                    {this.state.families.map((photo) => {  
-                      if(photo.family_type === 'children'){
-                        return (<Link to="/person/children"><img src={photo.url} className="child-img" alt="" /></Link>)
+                    {this.state.family1.map((family) => {  
+                      if(family.family_type === 'children'){
+                        return (<Link to="/person/children"><img src={family.url} className="child-img" alt="" /></Link>)
                       }
                     })}
                   </div>
@@ -79,7 +111,30 @@ export default class family extends Component {
           </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+        <div className="div-body">
+            <div className="div-container">
+              <div className="div-outer">
+                <div className="div-inner">
+                  <div className="parents">
+                    {this.state.family2.map((family) => {
+                      if(family.family_type === 'father'){
+                        return (<img src={family.url} className="parents-img" alt="" />)
+                      } else if(family.family_type === 'mother'){
+                        return (<img src={family.url} className="parents-img" alt="" />)
+                      }
+                    })}
+                  </div>
+                  <div className="child">
+                    {this.state.family2.map((family) => {  
+                      if(family.family_type === 'children'){
+                        return (<Link to="/person/children"><img src={family.url} className="child-img" alt="" /></Link>)
+                      }
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </TabPanel>
       </Tabs>
     );
