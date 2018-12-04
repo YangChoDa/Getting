@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./profile.css";
-import SelfModal from "./selfModal";
+
 import {Link} from 'react-router-dom';
 
 class Profile extends Component {
@@ -11,7 +11,7 @@ class Profile extends Component {
 
     this.likes = props.likes.map(like => {
       return (
-        <div className="likeInfo">
+        <div className="mypagelikeInfo">
           <Link to="/person">
           <img src={like.url} className="likeImg" alt=""></img>
           </Link>
@@ -32,7 +32,7 @@ class Profile extends Component {
             <p className="pStyle">견종 : 포메라니안</p>
             <p className="pStyle">나이 : 2살</p>
             <p className="pStyle">성별 : 여</p>
-            <SelfModal />
+            <p className="pStyle">소개 : blabla</p>
           </div>
           <hr className="hrs" />
           <div className="likes">

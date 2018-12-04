@@ -62,10 +62,11 @@
     height:50%;
 }
 
-.likeInfo{
-    width:10%;
+.mypagelikeInfo{
+    width:7%;
     float:left;
     margin:10px;
+    text-align: center;
 }
 
 .likeImg{

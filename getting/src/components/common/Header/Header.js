@@ -12,9 +12,9 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="logo">
-        <Link to="/"><img src="../Logo.png" className="logoImg" alt="Logo"/></Link> 
+        <Link to="/main"><img src="../Logo.png" className="logoImg" alt="Logo"/></Link> 
         </div>
-        <Link to="/"><div className="title"><h>Getting</h></div></Link>
+        <Link to="/main"><div className="title"><h>Getting</h></div></Link>
         <div className="menu">
           <div className="buttons">
             <Link to="/login"><Button color="secondary" outline className="logoutBtn">

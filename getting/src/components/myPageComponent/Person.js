@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Profile from "./profile";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
+import SelfModal from "./selfModal";
 import "react-tabs/style/react-tabs.css";
 import "./Person.css";
 
@@ -24,6 +24,7 @@ class Person extends Component {
           <TabPanel>
             <div className="patInfo">
               <Profile likes={this.state.likes}/>
+              <SelfModal />
             </div>
           </TabPanel>
         </Tabs>
