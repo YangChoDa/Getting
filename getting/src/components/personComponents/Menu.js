@@ -12,6 +12,7 @@ import {
   CardTitle,
   Button
 } from "reactstrap";
+import {Link} from 'react-router-dom';
 import "./Menu.css";
 import "react-tabs/style/react-tabs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -98,6 +99,30 @@ class Menu extends Component {
     };
   }
 
+  visitorClick = () => {
+    this.visitors.unshift(
+      <div className="comments">
+            <div className="headComment">
+              <img
+                src="../person_images/photos/animal-prints.png"
+                className="foot"
+                alt="footImage"
+              />
+              <strong>인절미</strong>
+            </div>
+            <hr className="hrs" />
+            <div className="bodyComment">
+              <img
+                src='../images/pat1.png'
+                className="proImg"
+                alt="profileImg"
+              />
+              가족이 예쁘네요~
+            </div>
+          </div>
+    );
+  }
+
   setValue = e => {
     this.setState({ menuBtn: e });
     // this.state = {menuBtn:e};
@@ -118,7 +143,7 @@ class Menu extends Component {
         <div className="visitors">
           <div>
             <input type="textarea" className="visitorsInput" />
-            <Button color="success">글남기기</Button>
+            <Link to="/person/bishong"><Button color="success" onClick={this.visitorClick}>글남기기</Button></Link>
           </div>
           {this.visitors}
         </div>
